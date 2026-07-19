@@ -6,8 +6,8 @@ logger = logging.getLogger(__name__)
 
 class Github_job_extractor:
     def __init__(self):
-        self.base_url = ""
-        self.repo = ""
+        self.base_url = "https://api.github.com/repos/backend-br/vagas/issues"
+        self.repo = "backend-br/vagas"
         self.headers = {
             "Accept": "application/vnd.github.v3+json",
             "User-Agent": ""
