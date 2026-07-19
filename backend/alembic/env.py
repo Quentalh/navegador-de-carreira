@@ -29,7 +29,10 @@ if config.config_file_name is not None:
 target_metadata = Base.metadata
 
 # Set the sqlalchemy.url dynamically from the application settings
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+db_url = os.environ.get("DATABASE_URL", str(settings.DATABASE_URL))
+
+# Injeta a URL na configuração principal
+config.set_main_option("sqlalchemy.url", db_url)
 
 def run_migrations_offline() -> None:
     """Run migrations in 'offline' mode.
@@ -67,9 +70,15 @@ async def run_async_migrations() -> None:
     and associate a connection with the context.
 
     """
+    # 1. Pegamos a seção bruta do .ini
+    ini_section = config.get_section(config.config_ini_section, {})
+    
+    # 2. INJEÇÃO CRÍTICA: Forçamos a nossa URL correta para dentro do dicionário
+    ini_section["sqlalchemy.url"] = config.get_main_option("sqlalchemy.url")
 
+    # 3. Agora o motor é criado com a garantia de usar o driver assíncrono
     connectable = async_engine_from_config(
-        config.get_section(config.config_ini_section, {}),
+        ini_section,
         prefix="sqlalchemy.",
         poolclass=pool.NullPool,
     )
@@ -78,7 +87,6 @@ async def run_async_migrations() -> None:
         await connection.run_sync(do_run_migrations)
 
     await connectable.dispose()
-
 
 def run_migrations_online() -> None:
     """Run migrations in 'online' mode."""

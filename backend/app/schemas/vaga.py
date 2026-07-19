@@ -1,7 +1,6 @@
 from pydantic import BaseModel, ConfigDict, model_validator
 from typing import Optional
 from datetime import datetime
-from app.db.models.vagas import FonteVagaEnum
 
 class VagaBase(BaseModel):
     titulo_cargo: str
@@ -12,7 +11,7 @@ class VagaBase(BaseModel):
     faixa_salarial_min: Optional[float] = None
     faixa_salarial_max: Optional[float] = None
     requisitos: Optional[dict] = None
-    fonte: FonteVagaEnum
+    fonte: str
     url_original: str
     ativa: bool = True
 
@@ -25,18 +24,18 @@ class VagaBase(BaseModel):
             if "," or " - " in local:
                 if "," in local:
                     parts = local.split(",")
-                    data["cidade"] = parts[0].strip()
-                    data["estado"] = parts[1].strip() if len(parts) > 1
+                    data["cidade"] = parts[0].strip()   if len(parts) > 1 else "Não informado"
+                    data["estado"] = parts[1].strip() if len(parts) > 1 else "Não informado"
                 elif " - " in local:
                     parts = local.split(" - ")
-                    data["cidade"] = parts[0].strip()
-                    data["estado"] = parts[1].strip() if len(parts) > 1
-                else:
-                    data["cidade"] = local.strip()
-                    data["estado"] = "Não informado"
+                    data["cidade"] = parts[0].strip()   if len(parts) > 1 else "Não informado"
+                    data["estado"] = parts[1].strip() if len(parts) > 1 else "Não informado"
+            else:
+                data["cidade"] = "Não informado"
+                data["estado"] = "Não informado"
         if not data.get("cidade") and not data.get("estado"):
-            data("cidade") = "Não informado"
-            data("estado") = "Não informado"
+            data["cidade"] = "Não informado"
+            data["estado"] = "Não informado"
         return data
 
             

@@ -1,7 +1,7 @@
 from app.db.models.base import Base
 from app.db.models.usuarios import Usuario, PlanoEnum
 from app.db.models.curriculos import Curriculo
-from app.db.models.vagas import Vaga, FonteVagaEnum
+from app.db.models.vagas import Vaga
 from app.db.models.trajetorias import Trajetoria, FonteDadoEnum
 from app.db.models.roadmaps import Roadmap, StatusRoadmapEnum, roadmap_vagas
 from app.db.models.clusters import Cluster
@@ -14,7 +14,6 @@ __all__ = [
     "PlanoEnum",
     "Curriculo",
     "Vaga",
-    "FonteVagaEnum",
     "Trajetoria",
     "FonteDadoEnum",
     "Roadmap",

@@ -66,7 +66,7 @@ def upgrade() -> None:
     sa.Column('faixa_salarial_min', sa.Numeric(precision=10, scale=2), nullable=True),
     sa.Column('faixa_salarial_max', sa.Numeric(precision=10, scale=2), nullable=True),
     sa.Column('requisitos', postgresql.JSONB(astext_type=sa.Text()), nullable=True),
-    sa.Column('fonte', postgresql.ENUM('linkedin', 'glassdoor', 'outro', name='fonte_vaga_enum'), nullable=False),
+    sa.Column('fonte', sa.String(length=50), nullable=False),
     sa.Column('url_original', sa.String(length=1000), nullable=False),
     sa.Column('hash_deduplicacao', sa.String(length=255), nullable=False),
     sa.Column('ativa', sa.Boolean(), nullable=False),
