@@ -1,33 +1,27 @@
 import httpx
 import logging
 from typing import List, Dict, Any
-
 logger = logging.getLogger(__name__)
 
 class Github_job_extractor:
     def __init__(self):
         self.base_url = "https://api.github.com/repos/backend-br/vagas/issues"
-        self.repo = "backend-br/vagas"
         self.headers = {
             "Accept": "application/vnd.github.v3+json",
-            "User-Agent": ""
+            "User-Agent": "NavegadorDeCarreira/1.0" # Corrigido: Valor preenchido
         }
-    #Função de busca de vagas no Github Jobs API usando cidade e estado como filtros
-    async def fetch_raw_vagas(self, cidade: str, estado: str, per_page: int = 30) -> List[Dict[str, Any]]:
-            local_query = f"{cidade}, {estado}"
-            params = {
-                 "state": "open",
-                 "labels": local_query,
-                 "per_page": per_page
-            }
-            async with httpx.AsyncClient(headers=self.headers) as client:
-                try:
-                    response = await client.get(self.base_url, headers=self.headers, params=params, timeout=10)
-                    response.raise_for_status()
-                    return response.json()
-                except Exception as e:
-                    logger.error(f"Erro ao buscar vagas em {self.base_url}: {e}")
-                    return []
+
+    async def fetch_jobs(self, cidade: str, estado: str, per_page: int = 30) -> List[Dict[str, Any]]:
+        local_query = f"{cidade}, {estado}" if estado else cidade
+        params = {"state": "open", "labels": local_query, "per_page": per_page}
+        async with httpx.AsyncClient(headers=self.headers) as client:
+            try:
+                response = await client.get(self.base_url, headers=self.headers, params=params, timeout=10)
+                response.raise_for_status()
+                return response.json()
+            except Exception as e:
+                logger.error(f"Erro ao buscar vagas no GitHub: {e}")
+                return []
             
     @staticmethod
     def extract_company_name(body: str) -> str:
