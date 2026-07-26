@@ -1,0 +1,102 @@
+{
+  "personal_info": {
+    "full_name": "Mariana Oliveira Santos",
+    "email": "mariana.santos.dev@example.com",
+    "phone": "(31) 99123-8877",
+    "location": "Belo Horizonte, MG",
+    "linkedin_url": "linkedin.com/in/marianasantosdev",
+    "github_url": "github.com/marianasantosdev",
+    "portfolio_url": null
+  },
+  "professional_summary": "Buscando oportunidade como Desenvolvedora Front-end / Full Stack Júnior para aplicar conhecimentos em React, JavaScript, HTML, CSS e Python.",
+  "seniority_level_estimate": "Júnior",
+  "work_experiences": [
+    {
+      "company": "Startup InovaTech",
+      "position": "Estagiária de Desenvolvimento Web",
+      "location": null,
+      "start_date": "08/2023",
+      "end_date": "06/2024",
+      "is_current": false,
+      "description": "Auxiliou no desenvolvimento de telas responsivas utilizando React, HTML5 e CSS3/Tailwind. Consumiu APIs RESTful em backend Python/FastAPI. Corrigiu bugs visuais e colaborou na documentação de componentes.",
+      "achievements": [
+        "Auxiliou no desenvolvimento de telas responsivas utilizando React, HTML5 e CSS3/Tailwind.",
+        "Consumiu APIs RESTful em backend Python/FastAPI.",
+        "Corrigiu bugs visuais e colaborou na documentação de componentes."
+      ],
+      "technologies": [
+        "React",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "Python",
+        "FastAPI",
+        "Git",
+        "JavaScript"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "PUC Minas",
+      "degree": "Análise e Desenvolvimento de Sistemas",
+      "field_of_study": null,
+      "start_date": "2023",
+      "end_date": "2025",
+      "is_ongoing": true
+    }
+  ],
+  "skills": {
+    "technical_skills": [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Python",
+      "Git",
+      "Tailwind CSS",
+      "FastAPI",
+      "Vite",
+      "Node.js",
+      "Express.js",
+      "MongoDB"
+    ],
+    "soft_skills": [],
+    "languages": []
+  },
+  "projects": [
+    {
+      "name": "TaskTracker Web App",
+      "description": "Aplicação de gerenciamento de tarefas com login e persistência de dados.",
+      "repository_url": "github.com/marianasantosdev/tasktracker",
+      "live_url": null,
+      "technologies": [
+        "React",
+        "Vite",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Desenvolvimento Web Full Stack",
+      "issuing_organization": "Alura",
+      "issue_date": "2023",
+      "credential_url": null
+    },
+    {
+      "name": "Git e GitHub do Zero ao Avançado",
+      "issuing_organization": "DIO",
+      "issue_date": "2023",
+      "credential_url": null
+    }
+  ],
+  "metadata": {
+    "model_used": "gemini-2.5-flash",
+    "latency_ms": 10016.26,
+    "extraction_timestamp": "2026-07-26T02:27:07.012475+00:00",
+    "is_mock": false
+  }
+}

@@ -1,0 +1,26 @@
+Mariana Oliveira Santos
+Belo Horizonte, MG | (31) 99123-8877 | mariana.santos.dev@example.com
+GitHub: github.com/marianasantosdev | LinkedIn: linkedin.com/in/marianasantosdev
+
+OBJETIVO
+Buscando oportunidade como Desenvolvedora Front-end / Full Stack Júnior para aplicar conhecimentos em React, JavaScript, HTML, CSS e Python.
+
+FORMAÇÃO
+Análise e Desenvolvimento de Sistemas - PUC Minas (2023 - 2025 - Em andamento)
+
+EXPERIÊNCIA
+Estagiária de Desenvolvimento Web - Startup InovaTech (Ago 2023 - Jun 2024)
+• Auxiliou no desenvolvimento de telas responsivas utilizando React, HTML5 e CSS3/Tailwind.
+• Consumiu APIs RESTful em backend Python/FastAPI.
+• Corrigiu bugs visuais e colaborou na documentação de componentes.
+Tecnologias: React, JavaScript, HTML, CSS, Git, Python.
+
+PROJETOS
+TaskTracker Web App
+• Aplicação de gerenciamento de tarefas com login e persistência de dados.
+• Repositório: github.com/marianasantosdev/tasktracker
+• Tecnologias: React, Vite, Node.js, Express, MongoDB.
+
+CERTIFICADOS
+• Desenvolvimento Web Full Stack - Alura (2023)
+• Git e GitHub do Zero ao Avançado - DIO (2023)

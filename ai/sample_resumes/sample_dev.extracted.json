@@ -1,0 +1,122 @@
+{
+  "personal_info": {
+    "full_name": "Carlos Eduardo Silva",
+    "email": "carlos.silva.dev@example.com",
+    "phone": "(11) 98765-4321",
+    "location": "São Paulo, SP",
+    "linkedin_url": "linkedin.com/in/carlossilvadev",
+    "github_url": "github.com/carlossilvadev",
+    "portfolio_url": null
+  },
+  "professional_summary": "Desenvolvedor de Software Full Stack com mais de 5 anos de experiência na construção de aplicações web escaláveis. Especialista em Python (FastAPI, Django), Node.js, React e PostgreSQL. Forte vivência com arquitetura em microsserviços, Docker, CI/CD e mensageria com RabbitMQ.",
+  "seniority_level_estimate": "Lead",
+  "work_experiences": [
+    {
+      "company": "TechFin Solutions",
+      "position": "Tech Lead / Desenvolvedor Sênior",
+      "location": null,
+      "start_date": "01/2022",
+      "end_date": "Atual",
+      "is_current": true,
+      "description": null,
+      "achievements": [
+        "Liderou a rearquitetura do sistema de pagamentos de monolito para microsserviços em FastAPI e Docker, reduzindo a latência da API em 35%.",
+        "Implementou pipeline de CI/CD com GitHub Actions, reduzindo o tempo de deploy em 50%.",
+        "Orientou um time de 4 desenvolvedores juniores e plenos na adoção de boas práticas e TDD."
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "company": "DataApp Soluções",
+      "position": "Desenvolvedor Backend Pleno",
+      "location": null,
+      "start_date": "03/2019",
+      "end_date": "12/2021",
+      "is_current": false,
+      "description": null,
+      "achievements": [
+        "Desenvolveu APIs RESTful para integração de relatórios financeiros usando Python e PostgreSQL.",
+        "Otimizou consultas SQL complexas, melhorando a velocidade de execução de relatórios mensais em 60%.",
+        "Participou da modelagem de banco de dados relacional e migrações com Alembic."
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Docker",
+        "Git"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidade de São Paulo (USP)",
+      "degree": "Bacharelado",
+      "field_of_study": "Ciência da Computação",
+      "start_date": "2015",
+      "end_date": "2019",
+      "is_ongoing": false
+    }
+  ],
+  "skills": {
+    "technical_skills": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "FastAPI",
+      "Django",
+      "React",
+      "PostgreSQL",
+      "Docker",
+      "Git",
+      "CI/CD",
+      "Linux"
+    ],
+    "soft_skills": [
+      "Liderança técnica",
+      "Comunicação clara",
+      "Resolução de problemas complexos"
+    ],
+    "languages": [
+      "Português (Nativo)",
+      "Inglês (Avançado/Fluente)"
+    ]
+  },
+  "projects": [
+    {
+      "name": "Navegador de Carreira",
+      "description": "Sistema de recomendação de vagas e mapa de carreira com análise preditiva de currículos.",
+      "repository_url": "github.com/carlossilvadev/navegador-de-carreira",
+      "live_url": null,
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "React",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuing_organization": "AWS",
+      "issue_date": "2023",
+      "credential_url": null
+    }
+  ],
+  "metadata": {
+    "model_used": "gemini-2.5-flash",
+    "latency_ms": 11551.76,
+    "extraction_timestamp": "2026-07-26T02:26:56.995275+00:00",
+    "is_mock": false
+  }
+}

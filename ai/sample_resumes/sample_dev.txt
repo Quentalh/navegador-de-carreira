@@ -1,0 +1,39 @@
+Carlos Eduardo Silva
+São Paulo, SP | (11) 98765-4321 | carlos.silva.dev@example.com
+LinkedIn: linkedin.com/in/carlossilvadev | GitHub: github.com/carlossilvadev
+
+RESUMO PROFISSIONAL
+Desenvolvedor de Software Full Stack com mais de 5 anos de experiência na construção de aplicações web escaláveis. Especialista em Python (FastAPI, Django), Node.js, React e PostgreSQL. Forte vivência com arquitetura em microsserviços, Docker, CI/CD e mensageria com RabbitMQ.
+
+EXPERIÊNCIA PROFISSIONAL
+
+Tech Lead / Desenvolvedor Sênior - TechFin Solutions (Jan 2022 - Atual)
+• Liderou a rearquitetura do sistema de pagamentos de monolito para microsserviços em FastAPI e Docker, reduzindo a latência da API em 35%.
+• Implementou pipeline de CI/CD com GitHub Actions, reduzindo o tempo de deploy em 50%.
+• Orientou um time de 4 desenvolvedores juniores e plenos na adoção de boas práticas e TDD.
+Tecnologias: Python, FastAPI, PostgreSQL, Redis, Docker, Kubernetes, AWS, GitHub Actions.
+
+Desenvolvedor Backend Pleno - DataApp Soluções (Mar 2019 - Dez 2021)
+• Desenvolveu APIs RESTful para integração de relatórios financeiros usando Python e PostgreSQL.
+• Otimizou consultas SQL complexas, melhorando a velocidade de execução de relatórios mensais em 60%.
+• Participou da modelagem de banco de dados relacional e migrações com Alembic.
+Tecnologias: Python, Django, PostgreSQL, Docker, Git.
+
+FORMAÇÃO ACADÊMICA
+
+Bacharelado em Ciência da Computação - Universidade de São Paulo (USP) (2015 - 2019)
+
+HABILIDADES & IDIOMAS
+• Habilidades Técnicas: Python, JavaScript, TypeScript, FastAPI, Django, React, PostgreSQL, Docker, Git, CI/CD, Linux.
+• Idiomas: Português (Nativo), Inglês (Avançado/Fluente).
+• Habilidades Comportamentais: Liderança técnica, comunicação clara, resolução de problemas complexos.
+
+PROJETOS RELEVANTES
+
+Navegador de Carreira (Projeto Open Source)
+• Sistema de recomendação de vagas e mapa de carreira com análise preditiva de currículos.
+• Repositório: github.com/carlossilvadev/navegador-de-carreira
+• Tecnologias: Python, FastAPI, React, PostgreSQL.
+
+CERTIFICAÇÕES
+• AWS Certified Solutions Architect – Associate (2023)
