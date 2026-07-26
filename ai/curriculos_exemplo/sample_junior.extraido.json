@@ -1,0 +1,88 @@
+{
+  "personal_info": {
+    "full_name": "Mariana Oliveira Santos",
+    "email": "mariana.santos.dev@example.com",
+    "phone": "(31) 99123-8877",
+    "location": "São Paulo, SP",
+    "linkedin_url": "https://linkedin.com/in/candidato",
+    "github_url": "https://github.com/candidato",
+    "portfolio_url": null
+  },
+  "professional_summary": "Profissional da área de tecnologia com foco em desenvolvimento de software e soluções modernas.",
+  "seniority_level_estimate": "Pleno",
+  "work_experiences": [
+    {
+      "company": "Empresa Exemplo Tech",
+      "position": "Desenvolvedor de Software",
+      "location": null,
+      "start_date": "2021",
+      "end_date": "Atual",
+      "is_current": true,
+      "description": "Atuação no desenvolvimento de APIs e aplicações web.",
+      "achievements": [
+        "Melhoria de performance em 30%"
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "React",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidade Exemplo",
+      "degree": "Bacharelado",
+      "field_of_study": "Ciência da Computação",
+      "start_date": "2017",
+      "end_date": "2021",
+      "is_ongoing": false
+    }
+  ],
+  "skills": {
+    "technical_skills": [
+      "Python",
+      "FastAPI",
+      "React",
+      "Docker",
+      "PostgreSQL"
+    ],
+    "soft_skills": [
+      "Trabalho em Equipe",
+      "Comunicação",
+      "Resolução de Problemas"
+    ],
+    "languages": [
+      "Português (Nativo)",
+      "Inglês (Intermediário)"
+    ]
+  },
+  "projects": [
+    {
+      "name": "Navegador de Carreira",
+      "description": "Plataforma de mapeamento de vagas e análise de currículos.",
+      "repository_url": null,
+      "live_url": null,
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "React"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certificado de Teste AI",
+      "issuing_organization": "Squad 3 IA",
+      "issue_date": "2026",
+      "credential_url": null
+    }
+  ],
+  "metadata": {
+    "model_used": "mock-engine",
+    "latency_ms": 0.02,
+    "extraction_timestamp": "2026-07-26T02:37:29.991250+00:00",
+    "is_mock": true
+  }
+}

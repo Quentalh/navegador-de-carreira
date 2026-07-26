@@ -1,13 +1,14 @@
 """
 AI Schemas package initialization.
 """
-from .resume_schema import (
+from .esquema_curriculo import (
     PersonalInfo,
     WorkExperience,
     Education,
     SkillSet,
     Project,
     Certification,
+    ExtractionMetadata,
     ResumeData,
 )
 
@@ -18,5 +19,6 @@ __all__ = [
     "SkillSet",
     "Project",
     "Certification",
+    "ExtractionMetadata",
     "ResumeData",
 ]

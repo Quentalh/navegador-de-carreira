@@ -14,8 +14,8 @@ if hasattr(sys.stdout, "reconfigure"):
 # Adiciona diretório raiz do projeto ao sys.path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from ai.extractor import ResumeExtractor
-from ai.schemas.resume_schema import ResumeData
+from ai.extrator import ResumeExtractor
+from ai.schemas.esquema_curriculo import ResumeData
 
 
 async def run_tests_async(mock_mode: bool = False, mask_pii: bool = False):
@@ -23,11 +23,11 @@ async def run_tests_async(mock_mode: bool = False, mask_pii: bool = False):
     print("[+] SQUAD 3 - TESTE ENTERPRISE DE EXTRACAO DE CURRICULO")
     print("==================================================")
 
-    samples_dir = Path(__file__).resolve().parent / "sample_resumes"
-    sample_files = [f for f in samples_dir.glob("*.txt") if not f.name.endswith(".extracted.json")]
+    samples_dir = Path(__file__).resolve().parent / "curriculos_exemplo"
+    sample_files = [f for f in samples_dir.glob("*.txt") if not f.name.endswith(".extraido.json")]
 
     if not sample_files:
-        print("[!] Nenhum curriculo de teste encontrado em sample_resumes/")
+        print("[!] Nenhum curriculo de teste encontrado em curriculos_exemplo/")
         return
 
     extractor = ResumeExtractor()
@@ -65,7 +65,7 @@ async def run_tests_async(mock_mode: bool = False, mask_pii: bool = False):
                 print(f"    Latencia (ms): {result.metadata.latency_ms} ms")
 
             # Salva o resultado em formato JSON formatado na pasta de teste
-            out_file = file_path.with_suffix(".extracted.json")
+            out_file = file_path.with_name(file_path.stem + ".extraido.json")
             out_file.write_text(result.model_dump_json(indent=2), encoding="utf-8")
             print(f"    Saida JSON salva em: {out_file.name}")
 

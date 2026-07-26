@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Dict, Any, Union, Optional, List, Tuple
 from dotenv import load_dotenv
 
-from .schemas.resume_schema import (
+from .schemas.esquema_curriculo import (
     ResumeData,
     PersonalInfo,
     WorkExperience,
@@ -18,9 +18,9 @@ from .schemas.resume_schema import (
     Certification,
     ExtractionMetadata,
 )
-from .prompts.resume_prompt import SYSTEM_INSTRUCTION, RESUME_EXTRACTION_PROMPT
-from .core.resilience import with_retry, execute_with_fallback
-from .core.pii_masker import PIIMasker
+from .prompts.prompt_curriculo import SYSTEM_INSTRUCTION, RESUME_EXTRACTION_PROMPT
+from .core.resiliencia import with_retry, execute_with_fallback
+from .core.mascarador_pii import PIIMasker
 
 # Carrega .env da raiz do monorepo se disponível
 root_env = Path(__file__).resolve().parent.parent / ".env"

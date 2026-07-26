@@ -1,16 +1,16 @@
 """
-FastAPI Router Blueprint for Squad 3 AI Module.
-Allows Squad 4 (Backend) to easily expose AI resume extraction endpoints.
+FastAPI Router Blueprint para a Squad 3 (Módulo de IA).
+Permite que a Squad 4 (Backend) exponha os endpoints de extração de currículos com facilidade.
 """
 from pathlib import Path
 from typing import Optional
 from fastapi import APIRouter, HTTPException, UploadFile, File, Form, status
 from pydantic import BaseModel
 
-from .extractor import ResumeExtractor
-from .schemas.resume_schema import ResumeData
+from .extrator import ResumeExtractor
+from .schemas.esquema_curriculo import ResumeData
 
-router = APIRouter(prefix="/ai", tags=["AI Resume Extractor"])
+router = APIRouter(prefix="/ia", tags=["IA Extração de Currículos"])
 extractor = ResumeExtractor()
 
 
@@ -20,7 +20,7 @@ class TextExtractRequest(BaseModel):
 
 
 @router.post(
-    "/extract-text",
+    "/extrair-texto",
     response_model=ResumeData,
     summary="Extrai dados estruturados a partir do texto do currículo",
     status_code=status.HTTP_200_OK,
@@ -48,7 +48,7 @@ async def extract_resume_from_text(payload: TextExtractRequest):
 
 
 @router.post(
-    "/extract-file",
+    "/extrair-arquivo",
     response_model=ResumeData,
     summary="Extrai dados estruturados a partir do upload de arquivo (PDF/TXT)",
     status_code=status.HTTP_200_OK,
@@ -60,7 +60,7 @@ async def extract_resume_from_file(
     """
     Recebe um arquivo de currículo (PDF, TXT ou Markdown) e retorna o JSON estruturado.
     """
-    filename = file.filename or "resume.txt"
+    filename = file.filename or "curriculo.txt"
     extension = Path(filename).suffix.lower()
 
     if extension not in [".pdf", ".txt", ".md"]:
@@ -72,7 +72,6 @@ async def extract_resume_from_file(
     try:
         content = await file.read()
         if extension == ".pdf":
-            # Salva arquivo temporário para leitura via pypdf
             import tempfile
             with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
                 tmp.write(content)
